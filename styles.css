@@ -1,0 +1,355 @@
+/* General Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #FACCCA;
+    color: #222222;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #A4A848;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    width: 100px;
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow nav to take available space */
+    justify-content: center; /* Center items horizontally */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222222;
+    font-weight: 300;
+    padding: 26px 36px;
+    background-color: #FACCCA;
+    border-radius: 50px;
+    font-size: 22px;
+}
+
+nav ul li a:hover {
+    background-color: #F3C6C8;
+}
+
+/* Hamburger Menu Styles (hidden by default) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Intro Section */
+.intro {
+    background-color: #A4A848;
+    text-align: center;
+    padding: 0px 0;
+    color: #F3C6C8;
+    font-size: 1.3em;
+    font-family: 'Poppins', sans-serif;
+}
+.intro h1 {
+    font-size: 1em; /* Adjusted font size */
+   
+}
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.about-text {
+    margin-left: 30px;
+}
+
+.about-text h2 {
+    font-size: 2em;
+}
+
+.about-text p {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.about-text button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #F3C6C8;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    background-color: #A57336;
+    padding: 50px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+/* Blog Section */
+.destinations {
+    padding: 50px;
+    text-align: center;
+    background-color: #FFF5F2;
+}
+
+.destinations h1 {
+    font-size: 36px;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+.destinations p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222222;
+    margin: 0 0 30px 0;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: calc(33.333% - 20px);
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 696px; /* Adjusted height to add approximately 2 inches */
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #222222;
+    flex-grow: 1; /* Ensure the paragraph takes available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Adjustments for Blog */
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        padding: 20px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .card p {
+        font-size: 14px; /* Adjust font size for better readability */
+        padding: 1px; /* Adjust padding */
+    }
+}
+
+/* Art Prints Section (Shop Page) */
+.art-prints {
+    padding: 50px;
+    text-align: center;
+    background-color: #FFF5F2;
+}
+
+.art-prints h1 {
+    font-size: 36px;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+.art-prints p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222222;
+    margin: 0 0 30px 0;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: calc(33.333% - 20px);
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1000px; /* Adjusted height to approximately 4 inches longer */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #222222;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #F3C6C8;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icons span {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+/* Responsive Adjustments for Shop */
+@media (max-width: 480px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive Adjustments for Header */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 50px;
+        background-color: #FACCCA;
+    }
+}
+
+/* Hidden class for mobile menu toggle */
+.hidden {
+    display: none;
+}

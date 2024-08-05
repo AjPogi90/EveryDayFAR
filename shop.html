@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Prints</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FFFFFF;
+            color: #222222;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #A4A848;
+            padding: 10px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            width: 100px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 5px; /* Reduced margin */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #222222;
+            font-weight: 300;
+            padding: 12px 18px; /* Reduced padding */
+            background-color: #FACCCA;
+            border-radius: 50px;
+            font-size: 16px; /* Reduced font size */
+        }
+
+        nav ul li a:hover {
+            background-color: #F3C6C8;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger i {
+            font-size: 1.5em;
+            color: #222222;
+        }
+
+        /* Main Section */
+        .main-content {
+            padding: 50px 20px;
+            background-color: #F7F7F7; /* Light background for the content */
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-size: 2.5em;
+            color: #6C8031;
+        }
+
+        .main-content .landscape {
+            width: 100%;
+            height: 200px;
+            background: url('https://via.placeholder.com/1200x200') no-repeat center center;
+            background-size: cover;
+            margin: 30px 0;
+        }
+
+        .main-content .text-content {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .main-content .text-content p {
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        /* Cards Container Styles */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px; /* Adjust as needed */
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #A87324;
+            border-radius: 15px;
+            width: calc(25% - 20px); /* 4 cards per row, with gap */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            height: 680px; /* Adjust as needed */
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #222222;
+        }
+
+        .card button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #F3C6C8;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .icons span {
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        .icons .heart {
+            color: #FFFFFF; /* Default heart color */
+        }
+
+        .icons .heart.active {
+            color: #F3C6C8; /* Active heart color */
+        }
+
+        .icons .chart {
+            color: #FFFFFF; /* Default cart color */
+        }
+
+        .icons .chart.active {
+            color: #F3C6C8; /* Active cart color */
+        }
+        
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+            }
+
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: center;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+                padding: 12px 0; /* Reduced padding */
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: calc(100% - 20px); /* 1 card per row on very small screens */
+            }
+        }
+
+        /* Footer Styles */
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .social-media {
+            margin-bottom: 10px;
+        }
+
+        .social-media a {
+            margin: 0 20px;
+            color: #222222;
+            font-size: 2.5em; /* Increased icon size */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #F3C6C8; /* Change color on hover */
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo"> <!-- Updated to match your logo style -->
+        </div>
+        <nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="cart.html">CART</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main-content">
+            <h1>Art Prints</h1>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="paint/arrocerospark.jpg" alt="Art Print">
+                    <p>Php 100</p>
+                    <button>Send Me a Message</button>
+                    <h4>Arroceros Park</h4>
+                    <p>6 x 4 inches | Prisma Colored Pencils</p>
+                    <div class="icons">
+                        <span class="heart">&#x2764;</span>
+                        <span class="chart">&#x1F6D2;</span>
+                    </div>
+                </div>
+                <!-- Repeat .card for other items -->
+                <div class="card">
+                    <img src="paint/binondomanila.jpg" alt="Art Print">
+                    <p>Php 100</p>
+                    <button>Send Me a Message</button>
+                    <h4>Chuan Kee, Binondo, Manila</h4>
+                    <p>6 x 4 inches | Prisma Colored Pencils</p>
+                    <div class="icons">
+                        <span class="heart">&#x2764;</span>
+                        <span class="chart">&#x1F6D2;</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="paint/dangwaflowermarket.jpg" alt="Art Print">
+                    <p>Php 100</p>
+                    <button>Send Me a Message</button>
+                    <h4>Dangwa Flower Market</h4>
+                    <p>6 x 4 inches | Prisma Colored Pencils</p>
+                    <div class="icons">
+                        <span class="heart">&#x2764;</span>
+                        <span class="chart">&#x1F6D2;</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="paint/upsunkengarden.jpg" alt="Art Print">
+                    <p>Php 100</p>
+                    <button>Send Me a Message</button>
+                    <h4>U.P Sunken Garden</h4>
+                    <p>6 x 4 inches | Prisma Colored Pencils</p>
+                    <div class="icons">
+                        <span class="heart">&#x2764;</span>
+                        <span class="chart">&#x1F6D2;</span>
+                    </div>
+                </div>
+                <!-- Add more cards if needed -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.instagram.com/everydaybyfar/?igsh=MWJvbWc4MnZqdGJjdQ%3D%3D&utm_source=qr&fbclid=IwY2xjawEcbmBleHRuA2FlbQIxMAABHaIvipE6zKzjywXs_WZNLBpXeIXJB_8IJhJV_rvU7p70j_JytMmm6aOaUA_aem_4K4EhUI__h6qux-EH1DY2g" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="contact.html" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="shop.html" class="social-icon"><i class="fas fa-store"></i></a>
+            </div>
+            <p>Everyday by FAR<br>everydaybyfar@gmail.com<br>© Everyday by FAR 2024</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('nav ul');
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+            });
+
+            const hearts = document.querySelectorAll('.icons .heart');
+            const carts = document.querySelectorAll('.icons .chart');
+            
+            hearts.forEach(heart => {
+                heart.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+
+            carts.forEach(cart => {
+                cart.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

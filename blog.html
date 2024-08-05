@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Destinations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FFFFFF;
+            color: #222222;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #A4A848;
+            padding: 10px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            width: 100px;
+            vertical-align: middle;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 5px; /* Reduced margin */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #222222;
+            font-weight: 300;
+            padding: 12px 18px; /* Reduced padding */
+            background-color: #FACCCA;
+            border-radius: 50px;
+            font-size: 16px; /* Reduced font size */
+        }
+
+        nav ul li a:hover {
+            background-color: #F3C6C8;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger i {
+            font-size: 1.5em;
+            color: #222222;
+        }
+
+        /* Main Section */
+        .main-content {
+            padding: 50px 20px;
+            background-color: #F7F7F7; /* Light background for the content */
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-size: 2.5em;
+            color: #6C8031;
+        }
+
+        .main-content .landscape {
+            width: 100%;
+            height: 200px;
+            background: url('https://via.placeholder.com/1200x200') no-repeat center center;
+            background-size: cover;
+            margin: 30px 0;
+        }
+
+        .main-content .text-content {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .main-content .text-content p {
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        /* Cards Container Styles */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            width: calc(25% - 20px);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            height: 500px;
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #222222;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: center;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+                padding: 12px 0; /* Reduced padding */
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .card {
+                width: calc(50% - 20px);
+            }
+            
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: calc(100% - 20px);
+            }
+        }
+
+        /* Footer Styles */
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .social-media {
+            margin-bottom: 10px;
+        }
+
+        .social-media a {
+            margin: 0 20px;
+            color: #222222;
+            font-size: 2.5em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #F3C6C8;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo"> <!-- Updated to match your logo style -->
+        </div>
+        <nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="cart.html">CART</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main-content">
+            <h1>The Destinations</h1>
+            <p>Follow along as I share my art and adventures, and discover exciting new destinations with me.</p>
+            
+            <div class="text-content">
+                <p>Explore the various destinations I have visited, filled with unique experiences and beautiful landscapes.</p>
+            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <h2>Arroceros Forest Park</h2>
+                    <p>I went to Arroceros Forest Park in Manila, for a quiet escape from the city's noise. The park, a small urban oasis full of trees and plants, offered a relaxing stroll with lots of shade and mild winds. It was an inviting spot to ponder and unwind, emphasizing the value of green spaces in cities. If you need some time away from city life, Arroceros Forest Park is an excellent place for you to disconnect and enjoy nature.</p>
+                </div>
+                <div class="card">
+                    <h2>Chuan Kee, Binondo, Manila</h2>
+                    <p>I went to Chuan Kee in Binondo, Manila, with some friends, and it was a wonderful time. The restaurant's lively atmosphere set the stage for a delightful meal. The signature rice was carefully seasoned. Chuan Kee serves traditional Chinese cuisine in a local setting. It's a must-visit if you're in Binondo and want some superb Chinese food.</p>
+                </div>
+                <div class="card">
+                    <h2>Dangwa Flower Market</h2>
+                    <p>I visited Dangwa Flower Market in Manila, and it was a vibrant experience. The market was packed with beautiful flowers of all kinds. Although it was a bit overwhelming, I enjoyed exploring the small stands and how they create bouquets.</p>
+                </div>
+                <div class="card">
+                    <h2>U.P Sunken Garden</h2>
+                    <p>I grew up here and this has a special place in my heart. It’s filled with nostalgia, even more so when the street vendors sell dirty ice cream, a variety of tusok-tusok, and all sorts of Filipino street food from sweet to savory. You can spend time with your loved ones and touch some grass. This place is definitely worth the visit and I must say it is my favorite.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.instagram.com/everydaybyfar/?igsh=MWJvbWc4MnZqdGJjdQ%3D%3D&utm_source=qr&fbclid=IwY2xjawEcbmBleHRuA2FlbQIxMAABHaIvipE6zKzjywXs_WZNLBpXeIXJB_8IJhJV_rvU7p70j_JytMmm6aOaUA_aem_4K4EhUI__h6qux-EH1DY2g" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="contact.html" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="shop.html" class="social-icon"><i class="fas fa-store"></i></a>
+            </div>
+            <p>Everyday by FAR<br>everydaybyfar@gmail.com<br>© Everyday by FAR 2024</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('nav ul'); // Correct selector
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

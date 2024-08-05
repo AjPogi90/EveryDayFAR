@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday by FAR</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FFFFFF;
+            color: #222222;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #A4A848;
+            padding: 10px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            width: 100px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #222222;
+            font-weight: 300;
+            padding: 12px 18px;
+            background-color: #FACCCA;
+            border-radius: 50px;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            background-color: #F3C6C8;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger i {
+            font-size: 1.5em;
+            color: #222222;
+        }
+
+        /* Main Section */
+        .intro {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .intro h1 {
+            font-size: 2.5em;
+            color: #6C8031;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .profile-image {
+            margin-right: 20px;
+        }
+
+        .profile-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            width: 150px; /* Adjusted size for desktop */
+        }
+
+        .about-text {
+            text-align: left;
+        }
+
+        .about-text h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .about-text p {
+            margin: 20px 0;
+        }
+
+        .about-text button {
+            padding: 10px 20px;
+            background-color: #FACCCA;
+            border: none;
+            border-radius: 50px;
+            color: #222222;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .about-text button:hover {
+            background-color: #F3C6C8;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .social-media {
+            margin-bottom: 10px;
+        }
+
+        .social-media a {
+            margin: 0 20px;
+            color: #000000;
+            font-size: 2.5em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #F3C6C8;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: center;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 0;
+                box-sizing: border-box;
+                align-items: center;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+                padding: 12px 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .about {
+                flex-direction: column; /* Stack profile image above text */
+                align-items: center;
+            }
+
+            .profile-image {
+                margin-bottom: 20px; /* Add margin below image */
+            }
+
+            .profile-image img {
+                width: 200px; /* Larger size for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo">
+        </div>
+        <nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="cart.html">CART</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Everyday by FAR</h1>
+        </section>
+        <section class="about">
+            <div class="profile-image">
+                <img src="francesca.png" alt="Profile Image">
+            </div>
+            <div class="about-text">
+                <h2>Hi, I'm Francesca</h2>
+                <p>I am a Multimedia Artist based in Manila who adores colorful things. Join me as I fuel my love for art and exploring new places!</p>
+                <a href="about.html">
+                <button>More About Me</button>
+                </a>
+            </div>
+        </section>
+        <section class="gallery">
+            <img src="paint/arrocerospark.jpg" alt="Gallery Image">
+            <img src="paint/dangwaflowermarket.jpg" alt="Gallery Image">
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.instagram.com/everydaybyfar/?igsh=MWJvbWc4MnZqdGJjdQ%3D%3D&utm_source=qr&fbclid=IwY2xjawEcbmBleHRuA2FlbQIxMAABHaIvipE6zKzjywXs_WZNLBpXeIXJB_8IJhJV_rvU7p70j_JytMmm6aOaUA_aem_4K4EhUI__h6qux-EH1DY2g" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="contact.html" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="shop.html" class="social-icon"><i class="fas fa-store"></i></a>
+            </div>
+            <p>Everyday by FAR<br>everydaybyfar@gmail.com<br>© Everyday by FAR 2024</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('nav ul');
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

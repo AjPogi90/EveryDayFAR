@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Everyday by FAR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #A87324; /* Brown background color */
+            color: #222222;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #A4A848;
+            padding: 10px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            width: 100px;
+            vertical-align: middle;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 5px; /* Reduced margin */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #222222;
+            font-weight: 300;
+            padding: 12px 18px; /* Reduced padding */
+            background-color: #FACCCA;
+            border-radius: 50px;
+            font-size: 16px; /* Reduced font size */
+        }
+
+        nav ul li a:hover {
+            background-color: #F3C6C8;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger i {
+            font-size: 1.5em;
+            color: #222222;
+        }
+
+        /* Main Section */
+        .main-content {
+            padding: 50px 20px;
+            background-color: #F7F7F7; /* Light background for the content */
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-size: 2.5em;
+            color: #6C8031;
+        }
+
+        .main-content .landscape {
+            width: 100%;
+            height: 200px;
+            background: url('https://via.placeholder.com/1200x200') no-repeat center center;
+            background-size: cover;
+            margin: 30px 0;
+        }
+
+        .main-content .text-content {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .main-content .text-content p {
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        /* Footer Styles */
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .social-media {
+            margin-bottom: 10px;
+        }
+
+        .social-media a {
+            margin: 0 20px;
+            color: #222222;
+            font-size: 2.5em; /* Increased icon size */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #F3C6C8; /* Change color on hover */
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: center;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+                padding: 12px 0; /* Reduced padding */
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo"> <!-- Updated to match your logo style -->
+        </div>
+        <nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="cart.html">CART</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-content">
+            <h1>I create because it makes me happy.</h1>
+            
+            <div class="text-content">
+                <h2>Welcome to my Creative Space!</h2>
+                <p>I’m a girl with a deep love for all things colorful. My art reflects the vibrancy of the world around me, from the lively streets of my city to the new places I explore. Each project is a new adventure, filled with inspirations.</p>
+                <p>Here, you’ll find a collection of my work and stories from my artistic journey. I’m thrilled to share my passion with you and invite you to come along as I explore, create, and celebrate the wonders of art.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.instagram.com/everydaybyfar/?igsh=MWJvbWc4MnZqdGJjdQ%3D%3D&utm_source=qr&fbclid=IwY2xjawEcbmBleHRuA2FlbQIxMAABHaIvipE6zKzjywXs_WZNLBpXeIXJB_8IJhJV_rvU7p70j_JytMmm6aOaUA_aem_4K4EhUI__h6qux-EH1DY2g" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="contact.html" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="shop.html" class="social-icon"><i class="fas fa-store"></i></a>
+            </div>
+            <p>Everyday by FAR<br>everydaybyfar@gmail.com<br>© Everyday by FAR 2024</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('nav ul');
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
