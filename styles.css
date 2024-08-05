@@ -83,6 +83,8 @@ nav ul li a:hover {
 .intro h1 {
     font-size: 1em; /* Adjusted font size */
    
+    
+   
 }
 
 /* About Section */
@@ -149,12 +151,18 @@ footer {
     align-items: center;
 }
 
+.footer-content p {
+    color: #000000; /* Set the text color to black */
+    margin: 5px 0;
+}
+
 .social-media a {
     margin: 0 10px;
     text-decoration: none;
     color: black;
     font-size: 1.2em;
 }
+
 
 /* Blog Section */
 .destinations {
