@@ -46,14 +46,47 @@ nav ul li a {
     text-decoration: none;
     color: #222222;
     font-weight: 300;
-    padding: 26px 36px;
+    padding: 12px 18px;
     background-color: #FACCCA;
     border-radius: 50px;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 nav ul li a:hover {
     background-color: #F3C6C8;
+}
+
+.main-content {
+    padding: 50px 20px;
+    background-color: #F7F7F7; /* Light background for the content */
+    text-align: center;
+}
+/* aboutPage Design */
+.main-content h1 {
+    font-size: 2.5em;
+    color: #6C8031;
+}
+
+.main-content .landscape {
+    width: 100%;
+    height: 200px;
+    background: url('https://via.placeholder.com/1200x200') no-repeat center center;
+    background-size: cover;
+    margin: 30px 0;
+}
+
+.main-content .text-content {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.main-content .text-content p {
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: center;
+    margin: 1 auto;
+    max-width: 800px;
 }
 
 /* Hamburger Menu Styles (hidden by default) */
@@ -61,6 +94,11 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 1.5em;
+    color: #222222;
 }
 
 .hamburger div {
@@ -106,7 +144,12 @@ nav ul li a:hover {
     background-color: white;
 }
 
+.profile-image {
+    margin-right: 20px;
+}
+
 .profile-image img {
+    max-width: 100%;
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -114,15 +157,18 @@ nav ul li a:hover {
 
 .about-text {
     margin-left: 30px;
+    text-align: left;
 }
 
 .about-text h2 {
+    margin: 0;
     font-size: 2em;
 }
 
 .about-text p {
     margin-top: 20px;
     font-size: 1em;
+    margin: 20px 0;
 }
 
 .about-text button {
@@ -133,6 +179,11 @@ nav ul li a:hover {
     border-radius: 50px;
     cursor: pointer;
     font-size: 1em;
+    color: #222222;
+    font-size: 16px;
+}
+.about-text button:hover {
+    background-color: #F3C6C8;
 }
 
 /* Gallery Section */
@@ -141,12 +192,17 @@ nav ul li a:hover {
     justify-content: space-around;
     background-color: #A57336;
     padding: 50px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .gallery img {
     width: 200px;
     height: 150px;
     border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    width: 300px;
 }
 
 /* Footer Styles */
@@ -154,6 +210,10 @@ footer {
     background-color: white;
     padding: 20px;
     text-align: center;
+    color: #FFFFFF;
+}
+.social-media {
+    margin-bottom: 10px;
 }
 
 .footer-content {
@@ -168,10 +228,16 @@ footer {
 }
 
 .social-media a {
+    margin: 0 20px;
     margin: 0 10px;
     text-decoration: none;
     color: black;
     font-size: 1.2em;
+    font-size: 2.5em;
+    transition: color 0.3s;
+}
+.social-media a:hover {
+    color: #F3C6C8;
 }
 
 
@@ -194,18 +260,20 @@ footer {
     color: #222222;
     margin: 0 0 30px 0;
 }
-
+  /* Cards Container BlogPage Styles */
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    justify-content: space-between;
     gap: 20px;
+    
 }
 
 .card {
     background-color: #FFFFFF;
     border-radius: 15px;
-    width: calc(33.333% - 20px);
+    width: calc(25% - 20px);
     padding: 30px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -214,11 +282,17 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     height: 696px; /* Adjusted height to add approximately 2 inches */
+            border-radius: 15px;
+            width: calc(25% - 20px);
+            height: 500px;
+ 
+    
 }
 
 .card h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-size: 1.5em;
 }
 
 .card p {
@@ -233,12 +307,8 @@ footer {
 /* Responsive Adjustments for Blog */
 @media (max-width: 480px) {
     .card {
-        width: 100%;
-        padding: 20px;
-        height: auto;
-        margin-bottom: 20px;
+        width: calc(100% - 20px);
     }
-
     .card p {
         font-size: 14px; /* Adjust font size for better readability */
         padding: 1px; /* Adjust padding */
@@ -273,17 +343,11 @@ footer {
 }
 
 .card {
-    background-color: #FFFFFF;
+            
     border-radius: 15px;
-    width: calc(33.333% - 20px);
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 1000px; /* Adjusted height to approximately 4 inches longer */
+    width: calc(25% - 20px);
+    height: 520px;
+    
 }
 
 .card img {
@@ -326,45 +390,68 @@ footer {
     }
 
     .card {
-        width: 100%;
-        padding: 20px;
-        height: auto;
-        margin-bottom: 20px;
+        width: calc(100% - 20px);
     }
 }
 
 /* Responsive Adjustments for Header */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .logo {
-        margin-bottom: 10px;
+        align-items: center;
     }
 
     nav {
         width: 100%;
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: none;
+        flex-direction: column;
         width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 
     nav ul li {
-        margin: 5px;
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
     }
 
     nav ul li a {
-        padding: 15px;
-        font-size: 18px;
-        border-radius: 50px;
-        background-color: #FACCCA;
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .about {
+        flex-direction: column; /* Stack profile image above text */
+        align-items: center;
+    }
+
+    .profile-image {
+        margin-bottom: 20px; /* Add margin below image */
+    }
+
+    .profile-image img {
+        width: 200px; /* Larger size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img {
+        width: 100%;
     }
 }
 
